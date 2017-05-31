@@ -9,9 +9,9 @@ require_relative 'db/connection'
 require_relative 'models/pokemon'
 
 
-# get '/' do
-#   puts "Gotta Catch 'Em All!'"
-# end
+get '/' do
+  erb :"pokemon/index"
+end
 
 get '/pokemon' do
   @pokemon = Pokemon.all.order(:name)
@@ -41,4 +41,10 @@ put '/pokemon/:id' do
   @pokemon = Pokemon.find(params[:id])
   @pokemon.update(params[:pokemon])
   redirect("/pokemon/#{@pokemon.id}")
+end
+
+delete '/pokemon/:id' do
+  @pokemon = Pokemon.find(params[:id])
+  @pokemon.destroy
+  redirect("/pokemon")
 end
