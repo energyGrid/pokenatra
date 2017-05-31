@@ -5,5 +5,5 @@ create table pokemons (
   name VARCHAR,
   cp INT,
   poke_type VARCHAR,
-  img_url VARCHAR
+  img_url TEXT
 );

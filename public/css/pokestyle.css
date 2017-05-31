@@ -8,13 +8,36 @@ Uncomment for sick pokestyle*/
 }
 
 a, p, h2, h3 {
-  color: rgb(215, 215, 0);
+  color: rgb(250, 255, 10);
   text-shadow: rgb(35, 75, 180) 3px 3px 1px;
   -webkit-text-stroke: 2px rgb(55, 95, 200);
   text-decoration: none;
   border-radius: 100px;
 }
 
+a, h2 {
+  padding: 10px 0 30px 15px;
+}
+
+label {
+  color: rgb(250, 255, 10);
+  text-shadow: rgb(35, 75, 180) 3px 3px 1px;
+  -webkit-text-stroke: 2px rgb(55, 95, 200);
+  text-decoration: none;
+  border-radius: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 0 5px 20px;
+}
+
+input {
+  clear: both;
+  padding: 5px 30px 5px 30px;
+  margin: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
 
 body {
   background-image: url(../images/pokedex.png);
@@ -23,6 +46,7 @@ body {
   font-family: "Pokemon", monospace;
   letter-spacing: .25em;
   font-size: 200%;
+  background-color: red;
 }
 
 a:hover {
@@ -51,6 +75,7 @@ a:hover {
   border-left-color: rgba(255, 0, 0, .5);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
+  text-align: center;
 }
 
 @keyframes pulse {
@@ -69,5 +94,11 @@ a:hover {
   75% {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  a {
+    font-size: 30px;
   }
 }
